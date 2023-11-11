@@ -49,7 +49,7 @@ export const SelectAndSave = styled(SelectAndSaveContainer)`
 
 SelectAndSave.propTypes = {
 	roles: propTypes.array,
-	userRoleId: propTypes.string,
+	userRoleId: propTypes.number,
 	userId: propTypes.string,
 	userSession: propTypes.string,
 	isUpdate: propTypes.bool,

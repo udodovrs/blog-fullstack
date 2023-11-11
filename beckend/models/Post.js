@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const validator = require('validator');
+const validator = require("validator");
 
 const PostSchema = mongoose.Schema(
 	{
@@ -9,8 +9,8 @@ const PostSchema = mongoose.Schema(
 		},
 		image: {
 			type: String,
-			//required: true,
-			/* validate: {
+		/* 	required: true,
+			validate: {
 				validator: validator.isURL,
 				message: 'Image url should be a valid url'
 			} */
@@ -19,10 +19,12 @@ const PostSchema = mongoose.Schema(
 			type: String,
 			//required: true,
 		},
-		comments: [{
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'Comment'
-		}]
+		comments: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Comment",
+			},
+		],
 	},
 	{ timestamps: true }
 );

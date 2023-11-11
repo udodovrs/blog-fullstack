@@ -19,9 +19,8 @@ const NewCommentContainer = ({ className, postId, setIsUpdate, isUpdate }) => {
 		if (valueComment === '') {
 			return;
 		}
-		request(`/posts/${postId}/comments`, "POST", {content:valueComment, author: user.id})
-			.then((data) => {
-
+		request(`/posts/${postId}/comments`, "POST", {content:valueComment})
+			.then(() => {
 				setIsUpdate(!isUpdate);
 				setValueComment('');
 			});

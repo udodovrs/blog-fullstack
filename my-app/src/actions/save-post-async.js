@@ -6,9 +6,8 @@ export const savePostAsync =
 		request(url, isNewPost ? 'POST' : 'PATCH', {
 			title: newTitile,
 			content: newContent,
-			imageUrl: newImgUrl
+			imageUrl: newImgUrl,
 		}).then(({ data }) => {
-			console.log(data)
 			dispatch({
 				type: ACTION_TYPE.SET_POST,
 				payload: data,

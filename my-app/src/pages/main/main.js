@@ -37,7 +37,7 @@ const MianContainer = ({ className }) => {
 				<h5 className="posts-area">Загрузка...</h5>
 			) : (
 				<div className="posts-area">
-					<h3>{posts.length === 0 && 'Статьи не найдены'}</h3>
+					{posts.length === 0 && <h3>Статьи не найдены</h3>}
 					{posts.map(({ id, title, imageUrl, publishedAt, comments }) => (
 						<Post
 							key={id}
