@@ -25,8 +25,6 @@ const mapPost = require("./helpers/mapPost");
 const { addComment, deleteComment } = require("./controllers/comment");
 const mapComment = require("./helpers/mapComment");
 
-console.log(process.env);
-
 const port = 3001;
 
 const app = express();
